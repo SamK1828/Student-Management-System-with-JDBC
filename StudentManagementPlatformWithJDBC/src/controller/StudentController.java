@@ -12,7 +12,8 @@ public class StudentController {
 
     public void start() {
         while (true) {
-            System.out.println("\n---- Student Management ----");
+        	System.out.println("\n------------------------------------");
+            System.out.println("---- Student Management Portal----");
             System.out.println("1. Add Student");
             System.out.println("2. Update Student");
             System.out.println("3. Delete Student");
@@ -26,9 +27,9 @@ public class StudentController {
             switch (ch) {
                 case 1 -> addStudent();
                 case 2 -> updateStudent();
-//                case 3 -> deleteStudent();
-//                case 4 -> viewStudentById();
-//                case 5 -> viewAllStudents();
+                case 3 -> deleteStudent();
+                case 4 -> viewStudentById();
+                case 5 -> viewAllStudents();
                 case 6 -> {
                     System.out.println("Exiting...");
                     return;
@@ -78,34 +79,34 @@ public class StudentController {
             System.out.println("Update failed.");
         }
     }
-//
-//    private void deleteStudent() {
-//        System.out.print("Enter ID to delete: ");
-//        int id = sc.nextInt();
-//        if (service.deleteStudent(id)) {
-//            System.out.println("Student deleted.");
-//        } else {
-//            System.out.println("Delete failed.");
-//        }
-//    }
-//
-//    private void viewStudentById() {
-//        System.out.print("Enter ID to view: ");
-//        int id = sc.nextInt();
-//        Student student = service.getStudentById(id);
-//        if (student != null) {
-//            System.out.println(student);
-//        } else {
-//            System.out.println("Student not found.");
-//        }
-//    }
-//
-//    private void viewAllStudents() {
-//        List<Student> list = service.getAllStudents();
-//        if (list.isEmpty()) {
-//            System.out.println("No students found.");
-//        } else {
-//            list.forEach(System.out::println);
-//        }
-//    }
+
+    private void deleteStudent() {
+        System.out.print("Enter ID to delete: ");
+        int id = sc.nextInt();
+        if (service.deleteStudent(id)) {
+            System.out.println("Student deleted.");
+        } else {
+            System.out.println("Delete failed.");
+        }
+    }
+
+    private void viewStudentById() {
+        System.out.print("Enter ID to view: ");
+        int id = sc.nextInt();
+        Student student = service.getStudentById(id);
+        if (student != null) {
+            System.out.println(student);
+        } else {
+            System.out.println("Student not found.");
+        }
+    }
+
+    private void viewAllStudents() {
+        List<Student> list = service.getAllStudents();
+        if (list.isEmpty()) {
+            System.out.println("No students found.");
+        } else {
+            list.forEach(System.out::println);
+        }
+    }
 }

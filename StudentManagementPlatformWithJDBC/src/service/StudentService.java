@@ -12,19 +12,19 @@ public class StudentService {
         return dao.addStudent(student);
     }
 
-//    public boolean updateStudent(Student student) {
-//        return dao.updateStudent(student);
-//    }
-//
-//    public boolean deleteStudent(int id) {
-//        return dao.deleteStudent(id);
-//    }
+    public boolean updateStudent(Student student) {
+        return dao.updateStudent(student);
+    }
+
+    public boolean deleteStudent(int id) {
+        return dao.deleteStudent(id);
+    }
 
     public Student getStudentById(int id) {
         return dao.getStudentById(id);
     }
 
-//    public List<Student> getAllStudents() {
-//        return dao.getAllStudents();
-//    }
+    public List<Student> getAllStudents() {
+        return dao.getAllStudents();
+    }
 }
