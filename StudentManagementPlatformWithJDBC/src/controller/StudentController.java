@@ -26,9 +26,9 @@ public class StudentController {
             switch (ch) {
                 case 1 -> addStudent();
                 case 2 -> updateStudent();
-                case 3 -> deleteStudent();
-                case 4 -> viewStudentById();
-                case 5 -> viewAllStudents();
+//                case 3 -> deleteStudent();
+//                case 4 -> viewStudentById();
+//                case 5 -> viewAllStudents();
                 case 6 -> {
                     System.out.println("Exiting...");
                     return;
