@@ -1,5 +1,5 @@
 package dao;
-//DAO -> Data Access Object 
+//DAO -> Data Access Object
 /*The Data Access Object (DAO) pattern is a structural design pattern used in Java to separate the data access logic 
   from the business logic.*/
 import model.Student;
